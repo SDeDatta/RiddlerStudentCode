@@ -4,15 +4,25 @@
  * for Adventures in Algorithms
  * At Menlo School in Atherton, CA
  *
- * Completed by: YOUR NAME HERE
+ * Completed by: Surya De Datta
  */
 public class Riddler {
 
     public String decryptOne(String encrypted) {
         String decrypted = "";
-
-        // TODO: Complete the decryptOne() function.
-
+        int value;
+        int shiftedValue;
+        char c;
+        char newChar;
+        for(int i = 0; i < encrypted.length(); i++)
+        {
+            c = encrypted.charAt(i);
+            value = (int) c;
+            shiftedValue = value + 9;
+            newChar = (char) shiftedValue;
+            decrypted += newChar;
+        }
+        System.out.println(decrypted);
         return decrypted;
     }
 
