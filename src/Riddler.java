@@ -87,10 +87,8 @@ public class Riddler {
         String decrypted = "";
         for(int i = 0; i < encrypted.length(); i++)
         {
-            String point = Integer.toHexString(encrypted.codePointAt(i));
-            //Converts hex number to decimal number
-            int dec = Integer.parseInt(point, 16);
-            int shifted = dec - SHIFT_FOUR;
+            int point = encrypted.codePointAt(i);
+            int shifted = point - SHIFT_FOUR;
             decrypted += (char)(shifted);
         }
         System.out.println(decrypted);
